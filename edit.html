@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    
+
+</head>
+<body>
+    <img src="" alt="">
+    <style>
+body {
+    font-family: "Rockwell", "Arial Narrow", Arial, sans-serif;
+    background-image: url('john.jpg');
+    background-size: cover;
+    background-attachment: fixed; 
+    color: lightgreen;
+    text-shadow: white;
+}
+
+h1{
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+h1:hover{
+    color: yellow;
+    letter-spacing: 4px;
+}
+
+img{
+    width: 4cm;
+    border-top: 70%;
+    box-shadow: 2px 2px 4px gray;
+    padding: 5px;
+    background: white;
+    margin: 15px;
+    transition: 0.2s;
+    opacity: 93%;
+    width: 6cm;
+    height: 6cm;
+    object-fit: cover;
+}
+
+img:hover{
+    transform: scale(1.2);
+    opacity: 100%;
+    box-shadow: 1px 1px 6px red;
+}
+
+.tabel{
+    border-collapse: collapse;
+    width: 10px 10px;
+    border-radius: 30%;
+
+
+}
+
+.tabel-isi, th{
+    border: 1px solid white;
+    padding: 8px;
+    background-color: #45a049;
+    text-align: center;
+
+
+}
+
+.tabel-isi:first-child{
+    text-align: center;
+
+
+}
+
+.judul{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.judul-tabel{
+    background-color: seagreen;
+    color: navajowhite;
+}
+
+.top1{
+    text-align: center;
+    color: lightgreen;
+}
+
+.tombol{
+    background-color: #ff00fc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.tombol:hover{
+    background-color: #45a049;
+}
+
+a{
+    color: orangered;
+    text-decoration: none;
+}
+.tabel-isi{
+    color: white;
+}
+
+.tabel-isi :hover{
+    background-color: #e84dff;
+}
+    </style>
+    <h4 class="judul">Edit Item</h4>
+    <table align="center">
+<div class="tabel">
+    <form class="row g-4" style="margin-left: 20px" method="post" enctype="multipart/form-data" action="index.php?menu=daftar_update">
+        <div class="tabel-isi">
+            <label for="validationDefault01" class="form-label">Nama Lengkap</label><br>
+            <input type="text" class="form-control" id="validationDefault01" name="nama" required>
+        </div>
+        <div class="tabel-isi">
+            <label for="validationDefault01" class="form-label">Kota</label><br>
+            <input type="text" class="form-control" id="validationDefault01" name="kota" required>
+        </div>
+    </div>
+    </form>
+    <div class="top1">
+        <a onclick="alert('Telah tersimpan')" href="tabel-2.html" class="tombol">Simpan</a>
+        <a onclick="alert('Selamat Tinggal')" href="index.html" class="tombol">Kembali</a>
+        <script>
+            $(document).ready(function(){ $('.text').click(function(){ 
+             let text = $(this).text();
+             alert(`Anda mengklik text yang berisi text "${text}"`);
+              if(text!='Hapus'){ 
+               let text2 = prompt('Mau diubah?:', text);
+               if(!text2) return; $(this).text(text2); }
+               else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } }) }) 
+           </script>
+    </div>
+</div>
+</table>
+
+</body>
+</html>
